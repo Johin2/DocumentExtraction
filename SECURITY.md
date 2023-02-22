@@ -13,4 +13,4 @@ currently being supported with security updates.
 | < 4.0   | :x:                |
 
 ##Reporting a Vulnerability
-contact me on johinjohny7@gmail.com
+Contact me on:- johinjohny7@gmail.com
