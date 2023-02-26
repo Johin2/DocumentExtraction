@@ -1,12 +1,13 @@
 import mysql.connector
 import cv2
 import pytesseract
+import my_library as lib
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
 
 def upload_file(file_path):
     if not os.path.isfile(file_path):
-       raise FileNotFoundError ("File not found")
+        raise FileNotFoundError("File not found")
 
     img = cv2.imread(file_path)
     height, width = img.shape[:2]
@@ -27,7 +28,7 @@ def insert_to_database(file_path, document_type, cnx):
         for file_path in file_paths:
             with open(file_path, 'rb') as img:
                 img_data = img.read()
-                cursor.execute(stmt,(file_path,img_data, document_type))
+                cursor.execute(stmt, (file_path, img_data, document_type))
         cnx.commit()
         cursor.close()
 
@@ -89,7 +90,6 @@ def main():
             print("Image uploading cancelled by user")
 
         cnx.close()
-
 
 
 if __name__ == "__main__":
