@@ -10,3 +10,5 @@ The upload_documents() function prompts the user to enter the document type and 
 The main() function connects to a MySQL server, calls upload_documents() to process the images and store them in the database, and prints a success or cancellation message to the console.
 
 Overall, this code enables the user to upload images, extract text from them, and store the text and metadata in a MySQL database.
+
+This project will keep on updating as I learn new things
